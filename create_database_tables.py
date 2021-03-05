@@ -92,7 +92,7 @@ TABLES['contrats_de_location'] = (
 
 # Connexion à mySQL
 
-cnx = mysql.connector.connect(user='arthur', password="*****")
+cnx = mysql.connector.connect(user='arthur', password="SGBDR")
 cursor = cnx.cursor()
 
 # Fonction de création de la base de données

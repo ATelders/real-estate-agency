@@ -2,7 +2,7 @@ from __future__ import print_function
 from datetime import date, datetime, timedelta
 import mysql.connector
 
-cnx = mysql.connector.connect(user='arthur', database='agence_location_python', password='*****')
+cnx = mysql.connector.connect(user='arthur', database='agence_location_python', password='SGBDR')
 cursor = cnx.cursor()
 
 
@@ -82,7 +82,7 @@ for i in range(len(data_commune)) :
         cursor.execute(add_commune, data_commune[i])
         print("Commune créée : {}".format(data_commune[i][0]))
     except :
-        print("La commune {} existe déjà".format(data_type_logement[i][0]))
+        print("La commune {} existe déjà".format(data_commune[i][0]))
 
 # Insert type de logement
 
@@ -128,6 +128,8 @@ for i in range(len(data_contrat_de_location)) :
         print("Contrat créé : {}".format(data_contrat_de_location[i][0]))
     except :
         print("Le contrat {} existe déjà".format(data_contrat_de_location[i][0]))
+
+
 
 
 
