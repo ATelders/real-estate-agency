@@ -67,11 +67,11 @@ data_logement = [
 ]
 
 data_contrat_de_location = [
-    [1, 2, datetime(2002, 12, 4), datetime(2020,2,2)],
-    [2, 3, datetime(2012, 12, 4, 20, 30, 40)],
-    [3, 4, datetime(2018, 12, 4, 20, 30, 40), datetime(2020, 12, 4, 20, 30, 40)],
-    [4, 5, datetime(2020, 12, 4, 20, 30, 40)],
-    [5, 1, datetime(2019, 12, 4, 20, 30, 40)],
+    [1, 2, "2018-12-21 9:30:20", "2018-12-21 9:30:20"],
+    [2, 3, "2018-12-21 9:30:20", "2018-12-21 9:30:20"],
+    [3, 4, "2018-12-21 9:30:20", "2018-12-21 9:30:20"],
+    [4, 5, "2018-12-21 9:30:20", "2018-12-21 9:30:20"],
+    [5, 1, "2018-12-21 9:30:20", "2018-12-21 9:30:20"],
 ]
 
 
@@ -127,7 +127,7 @@ for i in range(len(data_contrat_de_location)) :
         cursor.execute(add_contrat_de_location, data_contrat_de_location[i])
         print("Contrat créé : {}".format(data_contrat_de_location[i][0]))
     except :
-        print("Le contrat {} existe déjà".format(data_contrat_de_location[i][0]))
+        print("Erreur")
 
 
 

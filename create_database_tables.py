@@ -7,6 +7,8 @@ import mysql.connector
 from mysql.connector import errorcode
 
 
+pw = str(input("Entrez le mot de passe: "))
+
 # Initialisation du nom de la base de données
 
 DB_NAME = 'agence_location_python'
@@ -92,7 +94,7 @@ TABLES['contrats_de_location'] = (
 
 # Connexion à mySQL
 
-cnx = mysql.connector.connect(user='arthur', password="SGBDR")
+cnx = mysql.connector.connect(user='arthur', password=pw)
 cursor = cnx.cursor()
 
 # Fonction de création de la base de données
