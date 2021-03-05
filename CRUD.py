@@ -2,7 +2,7 @@ from __future__ import print_function
 from datetime import date, datetime, timedelta
 import mysql.connector
 
-cnx = mysql.connector.connect(user='arthur', database='agence_location_python', password='SGBDR')
+cnx = mysql.connector.connect(user='arthur', database='agence_location_python', password='*****')
 cursor = cnx.cursor()
 
 
